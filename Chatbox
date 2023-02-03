@@ -1,0 +1,32 @@
+#!/bin/bash
+
+echo "Welcome to the Customer Support Chatbot!"
+echo "How can I assist you today?"
+
+while true; do
+  read -p "You: " message
+  case $message in
+    "help")
+      echo "Chatbot: Here are a few things I can assist you with:"
+      echo "1. Information about your account"
+      echo "2. Technical support"
+      echo "3. Billing inquiries"
+      ;;
+    "information about your account")
+      echo "Chatbot: I'd be happy to help with that! What information are you looking for?"
+      ;;
+    "technical support")
+      echo "Chatbot: Sure thing! What seems to be the problem?"
+      ;;
+    "billing inquiries")
+      echo "Chatbot: I'd be happy to help with that! What billing question do you have?"
+      ;;
+    "quit")
+      echo "Chatbot: Thank you for chatting with us today. Have a great day!"
+      exit 0
+      ;;
+    *)
+      echo "Chatbot: I'm sorry, I don't understand what you're asking. Please try again."
+      ;;
+  esac
+done
